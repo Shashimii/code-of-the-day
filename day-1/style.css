@@ -1,0 +1,51 @@
+/* default styles */
+body {
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+    max-width: 40rem;   
+    height: auto;
+    border: 1px solid #ffffff; 
+    box-shadow: -1px 1px 25px 6px rgba(235,81,108,0.75);
+}
+
+.whitespace {
+    height: 10rem;
+}
+
+/* fade up styles */
+
+/* element base style before fading up */
+.element {
+    opacity: 0;
+    transform: translateY(20px);
+
+    /* transiton style when the visible class is added */
+    transition: opacity 0.2s linear, transform 0.2s linear; /* adjust the speed of the transition here */
+}
+
+/* this the style to fade up the elements */
+.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* dynamic fade up styles */
+/* just the same as the previous one */
+
+.dynamic-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+/* no need for .visible as the opacity and transform is applied dynamically on js */
